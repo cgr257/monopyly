@@ -16,45 +16,47 @@ def main():
   parser.add_argument('-g', '--games', default=1, type=int, help='the number of games the sim will run through')
   args = parser.parse_args()
 
-  def move_passGo(spaces,square):
+  #most of these functions are just place holders for now. They will be implemented later
+
+  #def move_passGo(spaces,square):
     #if move is in space increments (3 forward 3 back etc.) it will be stored as a positive (forward) or negative (back) int in $spaces
     #if move is to a specific square on the board, $spaces should be 0 and the square number will be specified in $square
     #the players current board square should be checked to determine if go is passed and if so the player should be given \$200.
-    newboardsquare=0
-    return newboardsquare
+    #newboardsquare=0
+    #return newboardsquare
 
-  def move_dontpassGo(spaces,square):
+  #def move_dontpassGo(spaces,square):
     #if move is in space increments (3 forward 3 back etc.) it will be stored as a positive (forward) or negative (back) int in $spaces
     #if move is to a specific square on the board, $spaces should be 0 and the square number will be specified in $square
-    newboardsquare=0
-    return newboardsquare
+    #newboardsquare=0
+    #return newboardsquare
 
-  def injail():
+  #def injail():
     #3 turns
-    turnsremaining=0
-    return turnsremaining
+    #turnsremaining=0
+    #return turnsremaining
 
-  def moneymod(dollars):
+  #def moneymod(dollars):
     #$dollars should be specified as a positive (given money) or negative (pay money) integer
-    playerfunds=0
-    return playerfunds
+    #playerfunds=0
+    #return playerfunds
 
-  def incometax(dollars):
+  #def incometax(dollars):
     #calculate income tax based on the number of $dollars the player has
-    taxamount=0
-    print ("income tax assessed")
-    return taxamount
+    #taxamount=0
+    #print ("income tax assessed")
+    #return taxamount
 
-  def luxurytax(dollars):
+  #def luxurytax(dollars):
     #calculate luxury tax based on the number of $dollars the player has
-    taxamount=0
-    print ("luxury tax assessed")
-    return taxamount
+    #taxamount=0
+    #print ("luxury tax assessed")
+    #return taxamount
 
-  def repairs(houses,hotels):
+  #def repairs(houses,hotels):
     #determine dollar amount cost of repairs for houses and hotels
-    repaircost=0
-    return repaircost
+    #repaircost=0
+    #return repaircost
 
   def chance():
     #choose a chance card
@@ -83,6 +85,7 @@ def main():
       ActionRequired="Luxury Tax"
     else:
       ActionRequired="none"
+
   #create a list of the name of each space on the Monopoly board
   Property=[
   "Go",
@@ -136,28 +139,28 @@ def main():
   RentNoHouse=[0,2,0,4,0,0,6,0,6,8,0,10,0,10,12,0,14,0,14,16,0,18,0,18,20,0,22,22,0,24,0,26,26,0,28,0,0,35,0,50]
 
   #cost of rent with one house
-  RentOneHouse=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+  #RentOneHouse=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 
   #cost of rent with two houses
-  RentTwoHouse=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+  #RentTwoHouse=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 
   #cost of rent with three houses
-  RentThreeHouse=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+  #RentThreeHouse=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 
   #cost of rent with four houses
-  RentFourHouse=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+  #RentFourHouse=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 
   #cost of rent with Hotel
-  RentHotel=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+  #RentHotel=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 
   #cost of each house
-  HouseCost=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+  #HouseCost=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 
   #cost of each hotel
-  HotelCost=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+  #HotelCost=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 
   #value of mortgage
-  Mortgage=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+  #Mortgage=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 
   #global counter that tracks the number of times any player lands on each square (for end game statistical purposes)
   SpaceHitCounter=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
@@ -177,8 +180,7 @@ def main():
 
 
   #set initial values for other variables
-
-  #this is the number of the current game
+  #this is the inital value of the current game
   GameNumber=0
 
   #this is the number of players, set with a command line option
@@ -189,7 +191,6 @@ def main():
 
   #this is the number of games to be played set with a command line option
   Games=args.games
-
 
   #create a loop that will run constantly until the specified number of games has been reached
   while (GameNumber < Games):
@@ -284,7 +285,6 @@ def main():
   for space in range(0,40):
     SpaceHitPercent=((SpaceHitCounter[space]/TotalSpaces)*100)
     print("{0}, {1}, {2}%".format(Property[space],SpaceHitCounter[space],SpaceHitPercent))
-
 
 if __name__ == "__main__":
     main()
